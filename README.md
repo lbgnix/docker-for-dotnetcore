@@ -62,6 +62,9 @@ docker build -t mysqlserver .
 docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=P@ssw0rd123! -d -p 1433:1433 --name mydb mysqlserver
 ```
 
+<img width="368" alt="image" src="https://user-images.githubusercontent.com/26162869/184676847-d24e4f04-a4bd-4114-993d-96d1c38d8da6.png">
+
+
 6) You can follow the database initialization with the command docker logs mydb -f until you see the ping command starting. Once it started, you can interrupt docker logs by hitting CTRL + C
 
 7)Run the following command to open an interactive session within the database container with sqlcmd. Sqlcmd is a basic command-line utility provided by Microsoft https://docs.microsoft.com/en-us/sql/relationaldatabases/scripting/sqlcmd-use-the-utility for ad hoc, interactive execution of Transact-SQL statements and scripts
@@ -105,6 +108,8 @@ First, we need to know what is the IP address of the container running the SQL S
 ```
 docker inspect mydb
 ```
+![image](https://user-images.githubusercontent.com/26162869/184676248-ff39505f-31d3-47b3-ad65-ba169053c505.png)
+
 
 Now we need to update the connection string used by the web app to connect to the SQL Server back end. Open the Startup.cs and replace localhost in the connection string by the IP address we just copied. Once finish making changes press CTRL + X and then press Y when asked for confirmation to retain your changes. Finally, you will be asked for file name to write. For that press Enter (without changing the name of the file). This will close the nano text editor.
 
@@ -129,7 +134,11 @@ Finally, run the container and expose the web app on port 8082
 docker run -d -p 8082:80 myaspcoreapp:3.1-withmssql
 ```
 
+
 Open a browser and naviguate to localhost:8082. The web app should display the list of users that we ingested in the database.
+
+![image](https://user-images.githubusercontent.com/26162869/184676140-b2887872-96e4-4007-97a7-c50a432614c2.png)
+
 
 We have reached the end of the this practical, now let's remove all the containers to leave the environment in a clean state. Run the command
 ```
