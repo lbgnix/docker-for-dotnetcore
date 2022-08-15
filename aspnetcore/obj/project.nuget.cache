@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Syl2f4iZzmMxnO2AFslMlJJAr4BWt9Nk8ENyiMUswd2NzPxXIVr8FiA/+vO0IgxkY1iNzgmzfH4J+2MIVBhJAw==",
+  "success": true,
+  "projectFilePath": "/root/labs/module1/aspnetcore/mywebapp.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.2/microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
