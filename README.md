@@ -1,4 +1,4 @@
-#Building and Running ASP.NET Core 3.x Application Inside A Container without Database# -
+**Building and Running ASP.NET Core 3.x Application Inside A Container without Database -**
 
 1) In this task you will build ASP .NET Core 3.x application and then package and run it as a container. Change to the relevant directory ~/aspnetcore. First, we need to run dotnet build, and publish to generate the binaries for our application. This can be done manually or by leveraging a Dockerfile. In this example, we will run the commands manually to produce the artifacts in a folder called published. The Dockerfile will only contain instructions to copy the files from the published folder into the image.
 ```
@@ -24,7 +24,7 @@ Note - You are now running ASP.NET Core application inside the container listeni
 Congratulations! 
 You have successfully completed this practical .
 
-Building and Running SQL Server 2017 in a Container - 
+*Building and Running SQL Server 2017 in a Container -* 
 
 Microsoft SQL Server is one of the most commonly used database server in the market today. Microsoft has made an investment to ensure that customers moving towards containers have an ability to leverage SQL Server through a container image.
 SQL Server 2017 is only available for Linux Containers and allow users to bring their own license key when starting the container.
